@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Material Design Colors -->
+    <color name="blue_500">#2196F3</color>
+    <color name="blue_700">#1976D2</color>
+    <color name="orange_400">#FFA726</color>
+
+    <!-- Custom Colors -->
+    <color name="amount_background">#BBDEFB</color>
+    <color name="result_background">#FFE0B2</color>
+</resources>

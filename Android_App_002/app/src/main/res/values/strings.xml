@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">App con Base de Datos</string>
+    <!--    LoginActivity-->
+
+    <!--    TextView-->
+    <string name="textViewTittle_text">Ingreso al sistema</string>
+
+
+    <!--    EditText-->
+    <string name="editTextUser_hint">Ingrese el Usuario</string>
+    <string name="editTextPassword_hint">Ingresa la Clave</string>
+    <!--    Buttons-->
+    <string name="buttonOk_text">Ingresar</string>
+
+    <!--    MainActivity -->
+    <!--    EditText -->
+    <string name="editTextCode_hint">Código</string>
+    <string name="editTextName_hint">Nombre</string>
+    <string name="editTextLastName_hint">Apellido</string>
+    <string name="editTextAge_hint">Edad</string>
+
+    <!--    Buttons -->
+    <string name="buttonInsert_text">Insertar</string>
+    <string name="buttonSearch_text">Buscar</string>
+    <string name="buttonDelete_text">Eliminar</string>
+    <string name="buttonUpdate_text">Actualizar</string>
+    <string name="buttonShowAll_text">Mostrar todos</string>
+
+    <!--    ShowAllActivity-->
+    <string name="textViewMessage_text">Lista de Contactos</string>
+</resources>

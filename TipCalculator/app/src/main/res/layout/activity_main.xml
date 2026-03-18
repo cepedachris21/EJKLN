@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAFAFA"
+    tools:context=".MainActivity">
+
+    <!-- Barra azul superior con título -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#2196F3"
+        android:gravity="center"
+        android:text="Tip Calculator"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <!-- Contenido principal -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:padding="12dp"
+        android:useDefaultMargins="true"
+        android:layout_gravity="center_horizontal">
+
+        <!-- Row 0: Amount Input -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal">
+
+            <!-- EditText OCULTO - Solo recibe números -->
+            <EditText
+                android:id="@+id/amountEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:background="@android:color/transparent"
+                android:digits="0123456789."
+                android:inputType="numberDecimal"
+                android:maxLength="6"
+                android:minHeight="48dp"
+                android:textColor="#00000000"
+                android:textSize="1sp"
+                tools:ignore="LabelFor,SmallSp,SpeakableTextPresentCheck" />
+
+            <!-- TextView visible con $ -->
+            <TextView
+                android:id="@+id/amountTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#BBDEFB"
+                android:elevation="4dp"
+                android:gravity="center_vertical"
+                android:hint="Enter Amount"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#757575"
+                android:textSize="28sp"
+                tools:ignore="HardcodedText" />
+        </FrameLayout>
+
+        <!-- Row 1: Porcentaje y SeekBar -->
+        <TextView
+            android:id="@+id/percentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="4dp"
+            android:text="15%"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+        <SeekBar
+            android:id="@+id/percentSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="fill_horizontal|center_vertical"
+            android:max="30"
+            android:progress="15" />
+
+        <!-- Row 2: Tip -->
+        <TextView
+            android:id="@+id/tipLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="4dp"
+            android:text="Tip"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tipTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="#FFE0B2"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="$0.00"
+            android:textColor="#757575"
+            android:textSize="24sp"
+            tools:ignore="HardcodedText" />
+
+        <!-- Row 3: Total -->
+        <TextView
+            android:id="@+id/totalLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="4dp"
+            android:text="Total"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/totalTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="#FFE0B2"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="$0.00"
+            android:textColor="#757575"
+            android:textSize="24sp"
+            tools:ignore="HardcodedText" />
+    </GridLayout>
+</LinearLayout>
